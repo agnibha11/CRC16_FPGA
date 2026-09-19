@@ -11,7 +11,7 @@ A bit-serial CRC-16 link — transmitter, codeword memory, error-injecting chann
 written in Verilog and running on an Avnet **ZedBoard**. The receiver verifies by **polynomial
 residue**, not by recomputing and comparing, so it can validate a codeword it has never seen before.
 
-> **Reconfigurable Computing *(CS G553)* — Lab Assignment 2, Question 2**
+> **Reconfigurable Computing *(CS G553)* — Lab Assignment 2, Question 2**, 
 > Birla Institute of Technology and Science, Pilani 
 
 ![Architecture](images/crc16_architecture.png)
@@ -32,7 +32,6 @@ residue**, not by recomputing and comparing, so it can validate a codeword it ha
 - [Throughput](#throughput)
 - [Timing closure](#timing-closure)
 - [Power](#power)
-- [Verification](#verification)
 - [Design decisions](#design-decisions)
 - [Known limitation](#known-limitation)
 - [Repository layout](#repository-layout)
@@ -409,7 +408,7 @@ Predicted from the RTL by hand, for comparison:
 Synthesis trimmed eleven registers that drive nothing — unused observation outputs and buffer bits no
 path can reach given `MAX_MSG = 32`.
 
-### Where the area actually goes
+### Utilization
 
 **No BRAM and no DSP are inferred**, which is correct: `MSG_MEM` and `CustomBuff` are single 48-bit
 registers with a 48:1 read multiplexer, not memories. At this size fabric flops and LUTs are cheaper
@@ -549,42 +548,6 @@ Dynamic power by hierarchy: `u_vio` 0.005 W, `dbg_hub` 0.003 W, **`u_core` 0.002
 the debug infrastructure costs several times more than the circuit under test. Vivado rates the
 confidence of this estimate as *Low* because no switching-activity file was supplied — read it as an
 order of magnitude, not a measurement.
-
----
-
-## Verification
-
-| Bench | Checks | What it proves |
-|---|---:|---|
-| `TB_CRC16` | 249 | `"123456789"` → `0x29B1` (published CCITT vector); 200 random messages vs. an independent long-division model |
-| `TB_CRC_CORE` | 101 | Clean/corrupt paths, custom stream both directions, variable lengths, the blind spot |
-| `TB_LATENCY` | — | Cycle counts quoted above |
-| Hardware | 11 tests | All pass on ZedBoard |
-
-The golden model in `CRC_REF.v` is written as explicit polynomial long division — deliberately a
-*different algorithm* from the LFSR under test. Agreement between two implementations of the same
-mathematics is evidence; agreement between two copies of the same code is not.
-
-### Transmitter output, verified on hardware
-
-| Message | Length | CRC | Codeword |
-|---|---|---|---|
-| `D` | 4 bits | `DFB2` | `DDFB2` |
-| `A5` | 8 bits | `04BF` | `A504BF` |
-| `ABCD` | 16 bits | `D46A` | `ABCDD46A` |
-| `DEADBEEF` | 32 bits | `4097` | `DEADBEEF4097` |
-
-### Syndromes are independent of message length and content
-
-The clearest confirmation of $\text{rem}(T') = \text{rem}(E)$:
-
-| `err_idx` | 4-bit msg | 8-bit msg | 32-bit msg |
-|---:|---|---|---|
-| 0 | `1021` | `1021` | `1021` |
-| 3 | `8108` | `8108` | `8108` |
-
-Three different messages, three different lengths, identical syndromes. The data cancels out of the
-algebra entirely.
 
 ---
 
