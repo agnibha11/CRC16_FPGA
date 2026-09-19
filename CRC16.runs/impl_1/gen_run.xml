@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789796872">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1789846231">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="crc_top_postroute_physopted.rqs"/>
@@ -59,7 +59,6 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="crc_top_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="crc_top_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="crc_top_postroute_physopt.dcp"/>
-  <File Type="ROUTE-RQS-PB" Name="crc_top_rqs_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="crc_top_bus_skew_routed.rpx"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="crc_top_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW" Name="crc_top_bus_skew_routed.rpt"/>
@@ -79,38 +78,21 @@
   <File Type="ROUTE-DRC-RPX" Name="crc_top_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="crc_top_drc_routed.pb"/>
   <File Type="ROUTE-DRC" Name="crc_top_drc_routed.rpt"/>
-  <File Type="ROUTE-UTIL-PB" Name="crc_top_utilization_routed.pb"/>
-  <File Type="ROUTE-UTIL" Name="crc_top_utilization_routed.rpt"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="crc_top_routed_bb.dcp"/>
   <File Type="ROUTE-DCP" Name="crc_top_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="crc_top_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="crc_top_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="crc_top_drc_physopted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="crc_top_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="crc_top_timing_summary_postplace_pwropted.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="crc_top_postplace_pwropt.dcp"/>
-  <File Type="PLACE-RQA-PB" Name="crc_top_rqa_placed.pb"/>
-  <File Type="PLACE-TIMING" Name="crc_top_timing_summary_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="crc_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="crc_top_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-CTRL" Name="crc_top_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="crc_top_utilization_placed.pb"/>
   <File Type="PLACE-UTIL" Name="crc_top_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="crc_top_clock_utilization_placed.rpt"/>
   <File Type="PLACE-IO" Name="crc_top_io_placed.rpt"/>
   <File Type="PLACE-DCP" Name="crc_top_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="crc_top_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="crc_top_drc_pwropted.rpt"/>
   <File Type="PWROPT-DCP" Name="crc_top_pwropt.dcp"/>
-  <File Type="OPT-RQA-PB" Name="crc_top_rqa_opted.pb"/>
-  <File Type="OPT-TIMING" Name="crc_top_timing_summary_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="crc_top.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="crc_top_methodology_drc_opted.rpt"/>
-  <File Type="OPT-UTIL-PB" Name="crc_top_utilization_opted.pb"/>
-  <File Type="OPT-UTIL" Name="crc_top_utilization_opted.rpt"/>
   <File Type="OPT-DRC" Name="crc_top_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="crc_top_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="crc_top_timing_summary_init.rpt"/>
   <File Type="REPORTS-TCL" Name="crc_top_reports.tcl"/>
   <File Type="PA-TCL" Name="crc_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">

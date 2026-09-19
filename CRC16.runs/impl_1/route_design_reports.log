@@ -1,0 +1,56 @@
+
+*** Running vivado
+    with args -m64 -nolog -nojournal -notrace -mode batch -product Vivado -source crc_top_reports.tcl -tclargs route_design
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sun Sep 20 01:02:08 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source crc_top_reports.tcl -notrace
+Command: open_checkpoint crc_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1558.250 ; gain = 0.000 ; free physical = 2022 ; free virtual = 12682
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1767.645 ; gain = 0.000 ; free physical = 1822 ; free virtual = 12499
+INFO: [Netlist 29-17] Analyzing 28 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1849.426 ; gain = 1.000 ; free physical = 1706 ; free virtual = 12388
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  tcl.statsThreshold
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Read placeStorage: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Read Physdb Files: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+Restored from archive | CPU: 0.190000 secs | Memory: 3.498970 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2431.863 ; gain = 8.906 ; free physical = 1168 ; free virtual = 11858
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2431.863 ; gain = 0.000 ; free physical = 1168 ; free virtual = 11858
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+sh: 1: cannot create /home/agnibha/Documents/acads/Reconfig/Lab: Is a directory
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 2431.898 ; gain = 1005.742 ; free physical = 1168 ; free virtual = 11858
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file crc_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 20 01:02:23 2026...
