@@ -20,8 +20,8 @@ A bit-serial CRC-16 link — transmitter, codeword memory, error-injecting chann
 written in Verilog and running on an Avnet **ZedBoard**. The receiver verifies by **polynomial
 residue**, not by recomputing and comparing, so it can validate a codeword it has never seen before.
 
-> **Reconfigurable Computing — Lab Assignment 2, Question 2**
-> Birla Institute of Technology and Science, Pilani *(CS G553)*
+> **Reconfigurable Computing*(CS G553)* — Lab Assignment 2, Question 2**
+> Birla Institute of Technology and Science, Pilani 
 
 ![Architecture](images/crc16_architecture.png)
 
