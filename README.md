@@ -6,21 +6,12 @@
 ![Vivado](https://img.shields.io/badge/Vivado-2025.2-FF6B00?style=for-the-badge)
 ![Verilog](https://img.shields.io/badge/Verilog--2001-6E4C9F?style=for-the-badge)
 
-![Clock](https://img.shields.io/badge/Clock-100%20MHz-00A98F?style=flat-square)
-![Fmax](https://img.shields.io/badge/F__max-158.3%20MHz-2EA44F?style=flat-square)
-![WNS](https://img.shields.io/badge/WNS-%2B3.684%20ns-2EA44F?style=flat-square)
-![Throughput](https://img.shields.io/badge/Throughput-100%20Mbit%2Fs-1E88E5?style=flat-square)
-![LUTs](https://img.shields.io/badge/LUTs-271-5C6BC0?style=flat-square)
-![FFs](https://img.shields.io/badge/Registers-332-5C6BC0?style=flat-square)
-![BRAM](https://img.shields.io/badge/BRAM-0-9E9E9E?style=flat-square)
-![DSP](https://img.shields.io/badge/DSP-0-9E9E9E?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-350%20passing-2EA44F?style=flat-square)
 
 A bit-serial CRC-16 link — transmitter, codeword memory, error-injecting channel and receiver —
 written in Verilog and running on an Avnet **ZedBoard**. The receiver verifies by **polynomial
 residue**, not by recomputing and comparing, so it can validate a codeword it has never seen before.
 
-> **Reconfigurable Computing*(CS G553)* — Lab Assignment 2, Question 2**
+> **Reconfigurable Computing *(CS G553)* — Lab Assignment 2, Question 2**
 > Birla Institute of Technology and Science, Pilani 
 
 ![Architecture](images/crc16_architecture.png)
