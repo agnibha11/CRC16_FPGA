@@ -34,7 +34,6 @@ residue**, not by recomputing and comparing, so it can validate a codeword it ha
 - [Power](#power)
 - [Design decisions](#design-decisions)
 - [Known limitation](#known-limitation)
-- [Repository layout](#repository-layout)
 
 ---
 
@@ -576,31 +575,3 @@ word twice and leave `cust_len` at 40 instead of 20.
 **Read back `cust_len` after every custom load.** A four-line `cust_loaded` latch in `CRC_CORE.v`
 would close this properly.
 
----
-
-## Repository layout
-
-```
-rtl/
-  CRC16.v              shared Galois LFSR primitive (16 FFs, 1 bit/clk)
-  SERIALIZER.v         48-bit shift register, parallel in -> serial out
-  CRC_TX.v             transmitter FSMD: LOAD -> APPEND -> DONE
-  MSG_MEM.v            codeword store, parallel write / serial read
-  CustomBuff.v         second input path, user-supplied codeword
-  CRC_RX.v             receiver FSMD: RECV -> CHECK -> DONE
-  CRC_CORE.v           structural glue, channel, OVERRIDE mux
-  CRC_TOP.v            pins, synchronisers, VIO, LEDs
-constraints/
-  CRC_CONSTRAINTS.xdc  ZedBoard pin + timing constraints
-sim/
-  CRC_REF.v            golden model by explicit long division (non-synthesisable)
-  TB_CRC16.v           249 checks on the LFSR primitive
-  TB_CRC_CORE.v        101 checks on the full system
-  TB_LATENCY.v         cycle-count instrumentation
-images/
-  crc16_architecture.svg / .png
-vivado/
-  collect_reports.tcl  dumps utilisation / timing / power reports
-REPORT.tex             LaTeX source for the submitted report
-REPORT.pdf             compiled report
-```
