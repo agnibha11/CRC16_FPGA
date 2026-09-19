@@ -63,17 +63,17 @@ always @(posedge clk) begin
             end
 
             T_APPEND: begin
-                cw_data <= (msg_buf << 16) | {32'd0,crc};   // FIX 13: was `=`,
-                cw_len <= msg_len + 6'd16;                  // a blocking assign
-                cw_we <= 1'b1;                              // inside a clocked block
+                cw_data <= (msg_buf << 16) | {32'd0,crc};   
+                cw_len <= msg_len + 6'd16;                 
+                cw_we <= 1'b1;                              
                 state <= T_DONE;
             end
 
             T_DONE: begin
-
+                //Do nothing in this clock cycle
             end
 
-            default: state <= T_LOAD;   // FIX 14: was missing; state 2'd3 would stick
+            default: state <= T_LOAD;
         endcase
 
     end
