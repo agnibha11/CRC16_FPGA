@@ -80,7 +80,6 @@ INIT = 0xFFFF,  MSB-first,  no reflection,  no final XOR
 | Slice Registers | 2006 total — **332 are user logic** (0.31 %) |
 | BRAM / DSP | **0 / 0** |
 | Total on-chip power | 0.119 W (0.013 W dynamic) |
-| Simulation checks | 350 pass / 0 fail |
 | Route status | 2644 / 2644 nets routed, 0 errors |
 
 Two numbers worth reading together. The whole CRC design is **271 LUTs and 332 flip-flops**. The VIO
